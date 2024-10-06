@@ -1,0 +1,395 @@
+/* body {
+    font-family: 'Cinzel', serif;
+} */
+
+.navbar {
+    background-color: #000000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-family: 'Cinzel', serif;
+    color: #f5d340;
+    font-weight: bold;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.nav-link {
+    font-family: 'Cinzel', serif;
+    color: #f5d340;
+    font-size: 1.2rem;
+    margin-left: 1rem;
+    position: relative;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+.nav-link::before,
+.nav-link::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #f5d340;
+    left: 0;
+    transition: transform 0.3s ease;
+}
+
+.nav-link::before {
+    top: 0;
+    transform: scaleX(0);
+}
+
+.nav-link::after {
+    bottom: 0;
+    transform: scaleX(0);
+}
+
+.nav-link:hover::before,
+.nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+#three-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+}
+
+.banner{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 77, 6, 0.9);
+}
+
+.hero-content {
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    color: #ffffff; /* Text color */
+    font-weight: bold;
+    text-align: center;
+    z-index: 2; /* Ensures content is above the particle system */
+}
+
+.hero-content h1 {
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 24px;
+    margin: 20px 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content .cta-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #002142; /* Background color for button */
+    background-color: #F3CC30; /* Button color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.hero-content .cta-button:hover {
+    background-color: #002142; /* Hover background color */
+    color: #F3CC30; /* Hover text color */
+}
+
+.button-container {
+    margin-top: 20px; /* Space above the buttons */
+}
+
+.btn-custom {
+    display: inline-block; /* Makes the link behave like a button */
+    padding: 10px 20px; /* Padding for the buttons */
+    margin: 10px; /* Space between buttons */
+    font-size: 1.2rem; /* Font size for button text */
+    font-weight: bold; /* Bold text */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline from links */
+    border-radius: 5px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.hire-button {
+    background-color: #F3CC30; /* Background color for Hire button */
+    color: #002142; /* Text color for Hire button */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+.contact-button {
+    background-color: #002142; /* Background color for Contact button */
+    color: #F3CC30; /* Text color for Contact button */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+/* Hover effects */
+.btn-custom:hover {
+    transform: translateY(-3px); /* Lift the button on hover */
+}
+
+.hire-button:hover {
+    background-color: #ffd700; /* Lighter shade on hover for Hire button */
+    color: #000; /* Dark text on hover */
+}
+
+.contact-button:hover {
+    background-color: #002142; /* Darker shade on hover for Contact button */
+    color: #FFD700; /* Lighter text on hover */
+}
+
+.about-us {
+    background-color: #000000;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-us h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(245, 211, 64, 0.7);
+}
+
+.about-content {
+    position: relative;
+    z-index: 1;
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.about-content:hover {
+    transform: translateY(-5px);
+    background: rgba(245, 211, 64, 0.1); /* Highlight on hover */
+}
+
+.about-content p {
+    padding: 20px;
+    margin: 0;
+}
+
+.animated-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(270deg, rgba(245, 211, 64, 0.3), rgba(245, 211, 64, 0.1), #000000, rgba(245, 211, 64, 0.1), rgba(245, 211, 64, 0.3));
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    z-index: -1;
+    border-radius: 20px;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+.skill {
+    background-color: #000;
+    padding: 100px 0;
+}
+
+/* Heading Styling */
+.skill h2 {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 4px;
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: #f5d340;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    animation: glowText 1.5s infinite alternate;
+}
+
+/* Text Glow Animation */
+@keyframes glowText {
+    from { text-shadow: 0 0 10px rgba(255, 255, 255, 0.2); }
+    to { text-shadow: 0 0 20px rgba(255, 255, 255, 0.6); }
+}
+
+/* Skill Progress Text Styling */
+.progress-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    color: #f5d340;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+/* Progress Bar Container */
+.progress {
+    height: 25px;
+    background-color: #333;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    border: 1px solid #f5d340;
+}
+
+/* Animated Gradient Progress Bar */
+.progress-bar {
+    background: linear-gradient(45deg, #f5d340, #ffb703, #f5d340);
+    background-size: 200% 200%;
+    width: 0%;
+    border-radius: 30px;
+    box-shadow: 0 0 15px #f5d340;
+    animation: moveGradient 3s ease infinite;
+    transition: width 2s ease-out;
+}
+
+/* Gradient Animation */
+@keyframes moveGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Neon Effect on Hover */
+.progress:hover .progress-bar {
+    box-shadow: 0 0 25px #f5d340, 0 0 50px #ffb703;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Scroll Animation */
+.progress-bar.animated-progress {
+    width: 0;
+}
+
+/* Trigger animation on scroll */
+.start-animation {
+    animation: growBar 2s forwards;
+}
+
+/* Keyframes for progress bar animation */
+@keyframes growBar {
+    from { width: 0; }
+    to { width: var(--progress-width); }
+}
+
+.contact-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-form {
+    background-color: #000000;
+    border: 2px solid #f5d340; /* Gold border */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); /* Soft shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-form:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.7);
+}
+
+.contact-form .form-control {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background for inputs */
+    color: #ffffff; /* White text for inputs */
+    border: 1px solid #f5d340; /* Gold border for inputs */
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-form .form-control:focus {
+    background-color: rgba(255, 255, 255, 0.2); /* Darker background on focus */
+    border-color: #f5d340; /* Gold border on focus */
+    box-shadow: 0 0 8px rgba(245, 211, 64, 0.7); /* Gold glow effect on focus */
+}
+
+.contact-form .btn-warning {
+    background-color: #f5d340;
+    color: #000;
+    border: none;
+    transition: background-color 0.3s, transform 0.2s;
+    position: relative;
+    overflow: hidden; /* For ripple effect */
+}
+
+.contact-form .btn-warning:hover {
+    background-color: #e0c030; /* Slightly darker on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.contact-form .form-label {
+    font-weight: bold;
+}
+
+.contact-form .form-control::placeholder {
+    color: #ffffff; /* Placeholder text color */
+    opacity: 0.7; /* Slightly transparent */
+}
+
+.invalid-feedback {
+    display: none; /* Hidden by default */
+}
+
+.is-invalid ~ .invalid-feedback {
+    display: block; /* Show if input is invalid */
+}
+
+#formMessage {
+    color: #f5d340;
+    font-weight: bold;
+    text-align: center;
+}
+
+footer {
+    background-color: #000000;
+}
+
+footer h5 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+footer a {
+    color: #f5d340; /* Gold color for links */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth color and scale transition */
+}
+
+footer a:hover {
+    color: #ffffff; /* White on hover */
+    text-decoration: underline; /* Underline on hover */
+    transform: scale(1.1); /* Slightly scale up on hover */
+}
+
+footer .social-icons a {
+    color: #f5d340; /* Gold color for social icons */
+    font-size: 1.5rem; /* Adjust icon size */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth color and scale transition */
+}
+
+footer .social-icons a:hover {
+    color: #ffffff; /* Change icon color on hover */
+    transform: scale(1.1); /* Slightly scale up on hover */
+}
+
+/* Style for the designed by text */
+footer .text-light span {
+    font-weight: bold; /* Bold for emphasis */
+    color: #f5d340; /* Match the gold color */
+}
